@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:ital,wght@0,300;0,800;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins !important;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.banner-container {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+
+}
+
+.bannerWrapper {
+    position: relative;
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    /* overflow-x: hidden; */
+}
+
+.fadeInOut {
+    width: 100vw;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    overflow: hidden;
+    height: 90vh;
+    /* margin-bottom: 20px; */
+}
+
+.banner-text {
+    position: absolute;
+    z-index: 5;
+    top: 10vh;
+    width: 40vw;
+    margin-left: 10vw;
+}
+
+.slide {
+    z-index: 2;
+}
+
+.slide-one,
+.slide-two {
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide-one {
+    animation: slideone 10s infinite;
+}
+
+.slide-two {
+    animation: slidetwo 10s infinite;
+}
+
+@keyframes slideone {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slidetwo {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.navbar {
+    z-index: 7;
+    position: absolute;
+    width: 100vw;
+    /* position: sticky; */
+    top: 0;
+    background: transparent !important;
+}
+
+.stickynav {
+    background-color: rgba(100, 100, 100, 0.5) !important;
+    color: aliceblue !important;
+    position: fixed;
+    top: 0px !important;
+
+    /* background-color: aquamarine !important; */
+}
+
+.nav-item .nav-link {
+    font-weight: 600 !important;
+    padding: 8px !important;
+    margin: 0px 10px !important;
+    color: black !important;
+}
+
+.nav-item .active {
+    background-color: rgb(80, 80, 245) !important;
+    color: white !important;
+    border-radius: 15px !important;
+
+}
+
+.dropdown-item:hover {
+    background-color: rgb(80, 80, 245) !important;
+    color: white !important;
+    border-radius: 15px !important;
+}
+
+.signupBtn {
+    background-color: rgb(2, 23, 61);
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    color: white;
+    font-size: larger;
+    font-weight: 700;
+}
+
+.aboutUsSec {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 10px auto;
+    height: 70vh;
+    margin-top: 15px;
+
+    /*  */
+}
+
+.CrouselDiv {
+    width: 90vw;
+    margin: 10px auto;
+}
+
+.carousel-inner {
+    width: 60vw;
+    height: 360px;
+    border: 20px solid rgb(211, 247, 211);
+    margin: 10px auto;
+}
+
+.carousel-item {
+    /* border-bottom: 20px solid rgb(211, 247, 211); */
+    height: 100%;
+
+}
+
+.carousel-control-next-icon {
+    background-image: url('./left-arrow.png');
+}
+
+.carousel-control-prev-icon {
+
+    background-image: url('./right-arrow.png');
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media screen and (max-width: 800px) {
+    .carousel-inner {
+        height: 100%;
+        border: 7px solid rgb(211, 247, 211);
+    }
+
+    .slide-one,
+    .slide-two {
+        height: 30vh;
+    }
+
+    .banner-text {
+        top: 10vh;
+        height: 30vh;
+    }
+
+    .bannerWrapper {
+        height: 35vh;
+    }
+
+    .aboutUsSec {
+        height: 48vh;
+    }
+
+    .ReserchSec {
+        height: 45vh;
+    }
+
+    .colHeight {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .navbar-collapse {
+        background-color: aliceblue;
+    }
+
+    .banner-text {
+        z-index: 3;
+    }
+
+    .stickynav {
+        background-color: transparent !important;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .colHeight {
+        width: 100%;
+        margin-bottom: 7px;
+    }
+
+    .aboutUsSec {
+        height: 32vh;
+    }
+
+    .ReserchSec {
+        height: 66vh !important;
+    }
+
+    .bannerWrapper {
+        height: 24vh;
+    }
+
+    .banner-text {
+        top: 6vh;
+        height: 25vh;
+    }
+    .signupBtn{
+        width: 77px;
+        height: 30px;
+        border-radius: 5px;
+        font-size: 1em;
+        font-weight: 500;
+    }
+    }
+
+
+
+.footerDiv {
+    width: 100vw;
+    height: fit-content;
+    color: white;
+    padding: 10px;
+    background-color: rgb(0, 154, 205);
+    transition: all 0.4s;
+}
+.stickybottom{
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
+    transition: all 0.4s;
+}
+
+.ReserchSec {
+    width: 60vw;
+    margin: 0px auto;
+    text-align: center;
+    /* margin: 0px auto; */
+    height: 40vh;
+    align-items: center;
+    /* margin-right: 5px; */
+}
+
+.rowWidth {
+    width: 60vw;
+}
+
+.circle,
+.circle2,
+.wrapper2,
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle,
+.circle2 {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: rgb(4, 95, 118);
+    background: conic-gradient(#1da7f2 3.6deg, #1c0a69 0deg);
+
+}
+
+.wrapper,
+.wrapper2 {
+    width: 170px;
+    height: 170px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.value,
+.value2 {
+    font-size: 4.7vw;
+    color: #1c0a69;
+    font-weight: bolder;
+}
